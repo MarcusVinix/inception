@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul  4 09:32:38 2022
+# Make data base, printed on Mon Jul  4 15:08:19 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ PATH = /home/marcus/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f5baf54c-21dc-4cbd-85b6-492d9a8cdc25.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-43807b6d-4b72-4d09-9b3d-4782e6e73f99.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -153,9 +153,9 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 45, inode 10133099162303604): 5 files, no impossibilities.
+# . (device 45, inode 36591746972440786): 6 files, no impossibilities.
 
-# 5 files, no impossibilities in 1 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -207,7 +207,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-30 14:24:34.5199894
+#  Last modified 2022-07-04 15:07:22.8213597
 #  File has been updated.
 #  Successfully updated.
 
@@ -222,7 +222,8 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
-	docker rmi wordpress mariadb nginx 
+	docker rmi wordpress mariadb nginx -f
+	docker image prune
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/18=0%
@@ -232,12 +233,12 @@ clean:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 12 / storage = 93 B / avg = 7 B
-# current buf: size = 8162 B / used = 93 B / count = 12 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 13 / storage = 98 B / avg = 7 B
+# current buf: size = 8162 B / used = 98 B / count = 13 / avg = 7 B
 
-# strcache performance: lookups = 21 / hit rate = 42%
+# strcache performance: lookups = 22 / hit rate = 40%
 # hash-table stats:
-# Load=12/8192=0%, Rehash=0, Collisions=1/21=5%
-# Finished Make data base on Mon Jul  4 09:32:38 2022
+# Load=13/8192=0%, Rehash=0, Collisions=1/22=5%
+# Finished Make data base on Mon Jul  4 15:08:19 2022
 
  

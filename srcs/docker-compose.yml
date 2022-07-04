@@ -17,6 +17,8 @@ services:
         restart: unless-stopped
         ports:
             - 443:433
+        volumes:
+            - wordpress-volume:/var/www/wordpress/
 
     mariadb:
         build: ./requirements/mariadb
@@ -32,6 +34,9 @@ services:
             - DB_NAME=${DB_NAME}
         networks:
             - inception-network
+        volumes:
+            - mariadb-volume:/var/lib/mysql
+      
 
     wordpress:
         depends_on:
@@ -49,8 +54,23 @@ services:
             - WP_CONFIG=${WP_CONFIG}
         networks:
           - inception-network
-        
+        volumes:
+            - wordpress-volume:/var/www/wordpress/
 
 networks:
     inception-network:
         driver: bridge
+
+volumes:
+    mariadb-volume:
+        driver: local
+        driver_opts:
+            type: 'none'
+            o: 'bind'
+            device: ${PATH_VOLUME}/mariadb
+    wordpress-volume:
+        driver: local
+        driver_opts:
+            type: 'none'
+            o: 'bind'
+            device: ${PATH_VOLUME}/wordpress
