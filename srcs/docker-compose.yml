@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+    nginx:
+        depends_on:
+            - wordpress
+        build: ./requirements/nginx
+        image: nginx
+        container_name: nginx
+        networks:
+            - inception-network
+        env_file: .env
+        environment:
+            - DOMAIN_NAME=${DOMAIN_NAME}
+            - CERTS_=${CERTS_}
+            - CERTS_KEY=${CERTS_KEY}
+        restart: unless-stopped
+        ports:
+            - 443:433
+
+    mariadb:
+        build: ./requirements/mariadb
+        image: mariadb
+        container_name: mariadb
+        restart: unless-stopped
+        env_file:
+            - .env
+        environment:
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - DB_NAME=${DB_NAME}
+        networks:
+            - inception-network
+
+    wordpress:
+        depends_on:
+            - mariadb
+        build: ./requirements/wordpress
+        image: wordpress
+        container_name: wordpress
+        restart: unless-stopped
+        env_file: .env
+        environment:
+            - DB_HOST=${DB_HOST}
+            - DB_NAME=${DB_NAME}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - WP_CONFIG=${WP_CONFIG}
+        networks:
+          - inception-network
+        
+
+networks:
+    inception-network:
+        driver: bridge
