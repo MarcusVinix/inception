@@ -8,17 +8,21 @@ RUN apt-get update && \
 	wget
 
 RUN mkdir /run/php && \
-	cd /tmp && wget https://wordpress.org/latest.tar.gz && \
-	tar -zxvf /tmp/latest.tar.gz && \
-	mkdir -p /var/www/html && \
-	mv wordpress /var/www/html/wordpress && \
-	chown -R www-data:www-data /var/www/html/wordpress/ && \
-	chmod -R 755 /var/www/html/wordpress/ && \
-	mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
+	wget https://wordpress.org/latest.tar.gz && \
+	tar -zxvf latest.tar.gz && \
+	mkdir -p /var/www/mavinici && \
+	mv wordpress /var/www/mavinici/wordpress && \
+	chown -R www-data:www-data /var/www/mavinici/wordpress/ && \
+	chmod -R 755 /var/www/mavinici/wordpress/
 
-COPY ./tools/config.sh /usr/local/bin
+COPY conf/ /srcs/
+COPY tools/ /usr/local/bin
+
+RUN cp /srcs/www.conf /etc/php/7.3/fpm/pool.d/
 
 EXPOSE 9000
+
+WORKDIR /var/www/mavinici/wordpress
 
 ENTRYPOINT [ "config.sh" ]
 

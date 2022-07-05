@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul  4 15:08:19 2022
+# Make data base, printed on Tue Jul  5 08:40:11 2022
 
 # Variables
 
@@ -47,11 +47,11 @@ VSCODE_CWD = /mnt/c/Users/bucck/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/marcus/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/home/marcus/.pyenv/versions/3.7.2/bin:/home/marcus/.ebcli-virtual-env/executables:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python39/Scripts/:/mnt/c/Python39/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/bucck/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/bucck/AppData/Roaming/npm:/mnt/c/Users/bucck/.dotnet/tools:/mnt/c/Users/bucck/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/marcus/.dotnet/tools
+PATH = /home/marcus/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/home/marcus/.pyenv/versions/3.7.2/bin:/home/marcus/.ebcli-virtual-env/executables:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python39/Scripts/:/mnt/c/Python39/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/bucck/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/bucck/AppData/Roaming/npm:/mnt/c/Users/bucck/.dotnet/tools:/mnt/c/Users/bucck/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/marcus/.dotnet/tools
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-43807b6d-4b72-4d09-9b3d-4782e6e73f99.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f484e181-d305-41df-8186-71c22c0c75a9.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -65,7 +65,7 @@ PWD = /mnt/c/projects/42cursus/inception
 # environment
 WSL_INTEROP = /run/WSL/8_interop
 # environment
-WT_SESSION = dc12a8ba-56be-4d2d-98ca-3040c942bf8a
+WT_SESSION = 69c62c7c-5693-4043-ab06-fbe9c8368ffe
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -239,6 +239,6 @@ clean:
 # strcache performance: lookups = 22 / hit rate = 40%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=1/22=5%
-# Finished Make data base on Mon Jul  4 15:08:19 2022
+# Finished Make data base on Tue Jul  5 08:40:11 2022
 
  
