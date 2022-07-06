@@ -24,7 +24,7 @@ stop:
 
 clean:
 	docker rmi wordpress mariadb nginx -f
-	docker image prune
+	docker image prune -f
 
 fclean: clean
 	docker system prune -a --force
@@ -33,4 +33,5 @@ ifneq ($(ALL_VOLUMES),)
 endif
 	docker system prune -a --volumes --force
 	sudo rm -rf /etc/hosts
+	sudo rm -rf ${VOLUME_DIR} 
 	sudo mv ./host_backup /etc/hosts
