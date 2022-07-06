@@ -11,7 +11,7 @@ then
 	GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$MYSQL_USER'@'%'; \
 	FLUSH PRIVILEGES;";
 	mysqladmin -u root password $MYSQL_ROOT_PASSWORD;
-
+	mysqladmin -u root -p$MYSQL_ROOT_PASSWORD shutdown;
 fi
 
 exec "$@"
