@@ -12,6 +12,7 @@ services:
         restart: unless-stopped
         ports:
             - "443:443"
+            - "7000:7000"
         volumes:
             - wordpress:/var/www/mavinici/wordpress
 

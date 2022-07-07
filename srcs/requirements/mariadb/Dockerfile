@@ -9,6 +9,7 @@ RUN			apt-get update && apt-get install -y \
 
 
 COPY ./tools/config.sh /usr/local/bin/
+COPY ./conf/wordpress_conf.sql .
 
 EXPOSE 3306
 

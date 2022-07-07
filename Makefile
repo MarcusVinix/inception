@@ -3,7 +3,7 @@ VOLUME_DIR = /home/mavinici/data/
 ALL_VOLUMES = $(shell docker volume ls -q)
 
 all: hosts volume
-	cd srcs && docker-compose up --build --remove-orphans
+	cd srcs && docker-compose up --build
 
 hosts:
 ifneq (${DOMAIN}, mavinici.42.fr)

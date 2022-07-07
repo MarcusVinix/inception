@@ -15,7 +15,9 @@ RUN mkdir /run/php && \
 	chown -R www-data:www-data /var/www/mavinici/wordpress/ && \
 	chmod -R 755 /var/www/mavinici/wordpress/
 
-COPY tools/ /usr/local/bin
+COPY ./tools/ /usr/local/bin
+
+COPY ./conf/index.html ./srcs/
 
 EXPOSE 9000
 

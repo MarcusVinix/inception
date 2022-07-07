@@ -11,7 +11,7 @@ RUN apt-get update &&\
 COPY ./conf/ /srcs/
 COPY ./tools/ssl-config.sh /usr/local/bin
 
-EXPOSE 443
+EXPOSE 443 7000
 
 ENTRYPOINT [ "ssl-config.sh" ]
 
